@@ -14,7 +14,8 @@ const ManageUser = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/admin/manageusers');
+       // const response = await axios.get('http://localhost:8000/admin/manageusers');
+        const response = await axios.get('https://project-37ge.onrender.com/admin/manageusers');
         setUsers(response.data);
       } catch (err) {
         setError('Failed to fetch users.');
@@ -32,7 +33,8 @@ const ManageUser = () => {
   // Delete user
   const handleDelete = async () => {
     try {
-      await axios.delete('http://localhost:8000/admin/manageusers', { data: { email: selectedUser } });
+     // await axios.delete('http://localhost:8000/admin/manageusers', { data: { email: selectedUser } });
+      await axios.delete('https://project-37ge.onrender.com/admin/manageusers', { data: { email: selectedUser } });
       setUsers(users.filter((user) => user.email !== selectedUser));
       setSelectedUser(null);
       onClose(); // Close confirmation dialog after deletion

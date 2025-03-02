@@ -15,8 +15,8 @@ const toast = useToast()
 const addUser = (e) => {
     e.preventDefault();
     //alert("Working");
-    axios
-      .post("http://localhost:8000/user/create", {
+   // axios.post("http://localhost:8000/user/create", {
+      axios.post("https://project-37ge.onrender.com/user/create", {
         ename: ename,
         email: email,
         mno: mno,

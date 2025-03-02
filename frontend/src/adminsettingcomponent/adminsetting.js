@@ -12,7 +12,8 @@ function Adminsetting () {
   const handleChangePassword = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put('http://localhost:8000/user/changepassword', {
+      //const response = await axios.put('http://localhost:8000/user/changepassword', {
+        const response = await axios.put('https://project-37ge.onrender.com/user/changepassword', {
         email,
         oldPassword,
         newPassword,
