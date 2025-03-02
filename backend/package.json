@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
@@ -14,8 +15,7 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "app.js",
-  "start":"node app.js",
-  "devDependencies": {},
+  "start": "node app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
