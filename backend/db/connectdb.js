@@ -3,7 +3,8 @@ const mongoose = require ('mongoose');
 const connectDB = async () => {
   try {
     // Replace <db_password> with your actual database password
-    const mongoURI = 'mongodb+srv://admin:admin12345@cluster0.r6gpi.mongodb.net/Fruits?retryWrites=true&w=majority&appName=Cluster0';
+    
+    const mongoURI = process.env.MONGODB_URI;
 
     await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
