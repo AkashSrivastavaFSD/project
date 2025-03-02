@@ -14,7 +14,7 @@ const insertData = async (req, res) => {
       unm: req.body.unm,
       pw: hashedPassword,
      
-      role: 'user', // Default role set to 'user'
+      role: 'role', // Default role set to 'user'
     });
 
     await user.save();
