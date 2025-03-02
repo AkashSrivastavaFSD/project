@@ -1,7 +1,13 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
 function Header()
 {
+
+  useEffect(() => {
+    // Ensure Bootstrap initializes properly
+    import('bootstrap/dist/js/bootstrap.bundle.min.js');
+  }, []);
+
     return(
         <div>
 
@@ -44,7 +50,7 @@ function Header()
     <div>
 {/* slider section */}
 <section className=" slider_section position-relative">
-  <div id="carouselExampleControls" className="carousel slide " data-ride="carousel">
+  <div id="carouselExampleControls" className="carousel slide " >
     <div className="carousel-inner">
       <div className="carousel-item active">
         <div className="img-box">
@@ -53,19 +59,19 @@ function Header()
       </div>
       <div className="carousel-item">
         <div className="img-box">
-          <img src="images/slider-img.jpg" alt=""/>
+          <img src="images/slider-img.jpg" className="d-block w-100" alt=""/>
         </div>
       </div>
       <div className="carousel-item">
         <div className="img-box">
-          <img src="images/slider-img.jpg" alt=""/>
+          <img src="images/slider-img.jpg" className="d-block w-100" alt=""/>
         </div>
       </div>
     </div>
-    <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a className="carousel-control-prev" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="prev">
       <span className="sr-only">Previous</span>
     </a>
-    <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a className="carousel-control-next" data-bs-target="#carouselExampleControls" role="button" data-bs-slide="next">
       <span className="sr-only">Next</span>
     </a>
   </div>
